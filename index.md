@@ -3,6 +3,7 @@
 **Education**
 - BS Computer Science | Indiana University 2019
 - Major GPA : 3.62 / 4.00
+
 **Specialities**
 - Racket
 - Python
