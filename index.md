@@ -1,7 +1,7 @@
 # Sam Barrido - Developer
 ## About
 **Education**
-- BS Computer Science &#124 Indiana University 2019
+- BS Computer Science &#124; Indiana University 2019
 - Major GPA : 3.62 / 4.00
 
 **Specialities**
