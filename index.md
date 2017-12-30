@@ -5,7 +5,7 @@
 - Major GPA : 3.62 / 4.00
 
 **Specialities**
--  [x]Racket
+-  [x] Racket
 -  [x] Python
 -  [] Java/JS
 -  [] Haskell
