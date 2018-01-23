@@ -7,6 +7,7 @@ skills become more robust, I hope to continually update this page.
 - [Basic Printing](projects/basicPrinting.md)
 - [Exploring Charset](projects/charsetPrinting.md)
 - [Exploring Math](projects/functions.md)
+- [Scanners and Arrays](projects/scannersArray.md)
 
 ## Racket
 
