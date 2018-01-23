@@ -1,5 +1,6 @@
+## Introduction to Java
+One of my first Java "applications"
 ```
-
 /* Sam Barrido
  * sbarrido
  * Jan. 11, 2018
@@ -22,5 +23,4 @@ public class lab1
 
 }
 //end class Lab1
-
 ```
