@@ -12,3 +12,7 @@ skills become more robust, I hope to continually update this page.
 ## Racket
 - [Exploring Animation](projects/racketAnimate.md)
 - [Mouse and Key Events](projects/racketEvent.md)
+- [Various Functions](projects/racketFunctions.md)
+- [Lamba Uses](projects/racketLambda.md)
+- [List Processing](projects/racketList.md)
+- [Mobile-List Processing](projects/racketMobile.md)
