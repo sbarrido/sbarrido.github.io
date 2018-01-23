@@ -2,27 +2,15 @@
 ## About
 **Education**
 - BS Computer Science &#124; Indiana University 2019
-- Major GPA : 3.62 / 4.00
+- Major GPA : 3.70 / 4.00
 
 **Specialities**
 -  [x] Racket
--  [x] Python
--  [] Java/JS
+-  [x] Java/JS
+-  [] Python
 -  [] Haskell
 -  [] C++
 -  [] SQL
 -  [] C#
 -  [] Swift
-
-**Extra-Curricular Activities**
-- Habitat for Humanity at IU
-    - Member, 2015 - Present
-    - Executive Board Member, 2017 - Present
-- Habitat for Humanity - Monroe County Affiliate
-    - Volunteer, 2015 - Present
-    - Crew Leader, 2018 - Present
-- Camp Kesem at IU
-    - Member, 2016 - Present
-    - Unit Leader, 2017
-- Filpino American Association at IU
-    - Member, 2015 - 2017
+-  [] Scheme
