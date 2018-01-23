@@ -4,4 +4,4 @@ by excercises or assignments recieved during my undergraduate experience. As I l
 skills become more robust, I hope to continually update this page. 
 
 ## Java 
-[Basic Printing] (projects/basicPrinting.md)
+[Basic Printing](projects/basicPrinting.md)
