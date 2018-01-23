@@ -10,4 +10,5 @@ skills become more robust, I hope to continually update this page.
 - [Scanners and Arrays](projects/scannersArray.md)
 
 ## Racket
-
+- [Exploring Animation](projects/racketAnimate.md)
+- [Mouse and Key Events](projects/racketEvent.md)
