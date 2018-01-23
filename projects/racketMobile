@@ -1,4 +1,4 @@
-##Recursion
+## Recursion
 Exploration of Mutual and Generative Recursion. Examples of "Tree" processing
 
 ```
@@ -295,4 +295,5 @@ Exploration of Mutual and Generative Recursion. Examples of "Tree" processing
                                                   empty))
                               "cat")
               (list "animal"))
+
 ```
