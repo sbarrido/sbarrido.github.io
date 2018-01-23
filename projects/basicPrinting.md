@@ -1,4 +1,4 @@
-'''
+```
 
 /* Sam Barrido
  * sbarrido
@@ -23,4 +23,4 @@ public class lab1
 }
 //end class Lab1
 
-'''
+```
