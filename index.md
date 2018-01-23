@@ -4,8 +4,8 @@
 - BS Computer Science &#124; Indiana University 2019
 - Major GPA : 3.30 / 4.00
 
-## [**Projects**](projects.md)
-Interested to see some of my work? 
+## Projects
+Interested to see some of my work? [Projects](projects.md)
 
 **Proficient**
 -  [x] Racket
