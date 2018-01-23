@@ -4,9 +4,9 @@ by excercises or assignments recieved during my undergraduate experience. As I l
 skills become more robust, I hope to continually update this page. 
 
 ## Java 
-[Basic Printing](projects/basicPrinting.md)
-[Exploring Charset](projects/charsetPrinting.md)
-[Exploring Math](projects/functions.md)
+- [Basic Printing](projects/basicPrinting.md)
+- [Exploring Charset](projects/charsetPrinting.md)
+- [Exploring Math](projects/functions.md)
 
 ## Racket
 
