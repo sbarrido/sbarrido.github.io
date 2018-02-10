@@ -322,7 +322,7 @@ public class Matrix
 	{
 		// variables to test
 		double[][] testArray = {{1.0, 2.0, 3.0}}, {4.0, 5.0, 6.0}, {7.0, 8.0, 9.0}};
-		double[][] eqArray = {{1.0, 2.0, 3.0}, {4.0, 5.0, 6.0}, {7.0, 8.0, 9.0}};
+		double[][] eqArray = {{1.0, 2.0, 3.0}}, {4.0, 5.0, 6.0}, {7.0, 8.0, 9.0}};
 		double[][] idArray = {{1.0, 0.0, 0.0}, {0.0, 1.0, 0.0}, {0.0, 0.0, 1.0}};
 		Matrix idMatrix = new Matrix(idArray);
 		Matrix testMatrix = new Matrix(testArray);
