@@ -8,6 +8,10 @@ skills become more robust, I hope to continually update this page.
 - [Exploring Charset](projects/charsetPrinting.md)
 - [Exploring Math](projects/functions.md)
 - [Scanners and Arrays](projects/scannersArray.md)
+- [Car Locking Mechanism](projects/lockMech.md)
+- [Roman Numeral Conversion](projects/romanConv.md)
+- [Spiral Generator](projects/spiralGen.md)
+- [Matrix Functions](projects/matrix.md)
 
 ## Racket
 - [Exploring Animation](projects/racketAnimate.md)
