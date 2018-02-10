@@ -1,5 +1,10 @@
 ## Spiral Generator (Graphics and Graphics2D)
-
+This project explores the basic Graphics and Graphics2D uses in Java. Currently, this application
+creates a spiral in the top-left corner of the created frame by building a sprial from the outside to the inside. 
+In order to more easily create a spiral from the center of the frame, I would need to adjust the program
+to begin drawing at the center of frame, building a sprial from the inside to the outside. Alternatively,
+I could maintain current code but change the starting location of my program to ensure the center of the spiral
+will also be in the center of the frame. I suspect the latter method will be more ineffecient than the former. 
 ```
 /**
  * @author Sam Barrido/sbarrido
@@ -108,7 +113,8 @@ public class SpiralGenerator
 	}
 }
 ```
-
+## Spiral Viewing Class
+Simply used to create a frame and add the spiral component. 
 ```
 /**
  * @author Sam Barrido/sbarrido
