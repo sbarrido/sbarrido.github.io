@@ -3,6 +3,11 @@ This page tracks each project that I have or will work on in the future. Many of
 by excercises or assignments recieved during my undergraduate experience. As I learn more languages and my programming
 skills become more robust, I hope to continually update this page. 
 
+Spring '18 Goals:
+- [] Create a working GUI Application
+- [x] Familiar with Unix System
+- [] Familiar with JUnit Testing
+
 ## Java 
 - [Basic Printing](projects/basicPrinting.md)
 - [Exploring Charset](projects/charsetPrinting.md)
