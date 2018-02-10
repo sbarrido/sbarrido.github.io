@@ -327,7 +327,8 @@ public class Matrix
 		Matrix idMatrix = new Matrix(idArray);
 		Matrix testMatrix = new Matrix(testArray);
 		Matrix eqMatrix = new Matrix(eqArray);
-		
+
+
 		//===============toString() Test=================
 		System.out.println("========toString() Test=================");
 		System.out.println(testMatrix.toString());
