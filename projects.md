@@ -6,8 +6,6 @@ skills become more robust, I hope to continually update this page.
 Spring '18 Goals:
 - [] Create a working GUI Application
 - [] Experience UNIX/LINUX Systems
-- [] Familiar with JUnit Testing
-
 ## Java 
 - [Basic Printing](projects/basicPrinting.md)
 - [Exploring Charset](projects/charsetPrinting.md)
