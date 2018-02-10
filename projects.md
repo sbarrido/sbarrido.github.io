@@ -5,7 +5,7 @@ skills become more robust, I hope to continually update this page.
 
 Spring '18 Goals:
 - [] Create a working GUI Application
-- [x] Familiar with Unix System
+- [x] Familiar with Unix Systems
 - [] Familiar with JUnit Testing
 
 ## Java 
