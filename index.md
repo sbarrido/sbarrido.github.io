@@ -1,4 +1,4 @@
-# Sam Barrido - Developer
+# Sam Barrido - Student
 ## About
 **Education**
 - BS Computer Science &#124; Indiana University 2019
