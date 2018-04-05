@@ -9,10 +9,4 @@ Interested to see some of my work? [Projects](projects.md)
 **Proficient**
 -  [x] Racket
 -  [x] Java/JS
--  [] Python
--  [] Haskell
--  [] C++
--  [] SQL
--  [] C#
--  [] Swift
--  [] Scheme
+
