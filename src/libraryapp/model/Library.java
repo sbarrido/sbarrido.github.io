@@ -185,7 +185,7 @@ public class Library
 	}
 	
 	//Getters
-	protected ConcurrentHashMap<String, ArrayList<Book>> getBookMap()
+	public ConcurrentHashMap<String, ArrayList<Book>> getBookMap()
 	{
 		return this.bookMap;
 	}

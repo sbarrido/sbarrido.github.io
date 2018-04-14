@@ -20,6 +20,7 @@ public class MainFrame extends JFrame implements Observer
 		
 		Observer.currentUser.add(this);
 		
+		this.setName("main");
 		this.setTitle("Library Application");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}

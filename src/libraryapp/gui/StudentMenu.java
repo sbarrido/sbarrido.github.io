@@ -10,9 +10,12 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.JRadioButton;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+
+import java.util.ArrayList;
 
 public class StudentMenu extends JPanel implements Observer
 {
@@ -22,11 +25,11 @@ public class StudentMenu extends JPanel implements Observer
 	private static JLabel username = new JLabel();
 	private static JLabel owed = new JLabel();
 	private static JTextArea bookList = new JTextArea(20, 40);
-	private static JTextField payment = new JTextField(5);
-	private static JTextField authSearch = new JTextField(20);
-	private static JTextField titlSearch = new JTextField(20);
-	private static JTextField isbSearch = new JTextField(20);
-	
+	public static JTextField payment = new JTextField(5);
+	public static JTextField authSearch = new JTextField(20);
+	public static JTextField titlSearch = new JTextField(20);
+	public static JTextField isbSearch = new JTextField(20);
+	public static ArrayList<JRadioButton> bookResults = new ArrayList<JRadioButton>();
 	
 	private Student user = new Student();
 	
@@ -95,11 +98,13 @@ public class StudentMenu extends JPanel implements Observer
 		JPanel search = showSearch();
 		JPanel returns = showReturn();
 		JPanel dues = showDues();
+		JPanel results = new SearchResultsMenu();
 		
 		studentCont.add(books, "books");
 		studentCont.add(search, "search");
 		studentCont.add(returns, "return");
 		studentCont.add(dues, "dues");
+		studentCont.add(results, "result");
 		
 		studentCard.show(studentCont, "books");
 		studentCont.setVisible(true);
@@ -124,33 +129,58 @@ public class StudentMenu extends JPanel implements Observer
 		JPanel titleSearch = new JPanel();
 		JPanel isbnSearch = new JPanel();
 		
+		JPanel titlCont = new JPanel();
+		JPanel authCont = new JPanel();
+		JPanel isbnCont = new JPanel();
+		titlCont.setLayout(new BoxLayout(titlCont, BoxLayout.Y_AXIS));
+		authCont.setLayout(new BoxLayout(authCont, BoxLayout.Y_AXIS));
+		isbnCont.setLayout(new BoxLayout(isbnCont, BoxLayout.Y_AXIS));
+		
 		JLabel title = new JLabel("Search Catalogue");
 		JLabel authorS = new JLabel("Search by Author");
 		JLabel titleS = new JLabel("Search by Title");
 		JLabel isbnS = new JLabel("Search by ISBN");
 		
-		JButton search = new JButton("Search");
+		JButton searchT = new JButton("Search");
+		JButton searchA = new JButton("Search");
+		JButton searchI = new JButton("Search");
+		
+		JButton see = new JButton("See Results");
+		
+		searchT.setActionCommand("title");
+		searchA.setActionCommand("author");
+		searchI.setActionCommand("isbn");
+		
+		searchT.addActionListener(new SearchListener());
+		searchA.addActionListener(new SearchListener());
+		searchI.addActionListener(new SearchListener());
+		
+		see.addActionListener(new SearchResultsMenu());
 		
 		title.setAlignmentX(CENTER_ALIGNMENT);
+		
 		authorSearch.add(authorS);
 		authorSearch.add(authSearch);
+		authorSearch.add(searchA);
 		authorSearch.setAlignmentX(CENTER_ALIGNMENT);
 		 
 		titleSearch.add(titleS);
 		titleSearch.add(titlSearch);
+		titleSearch.add(searchT);
 		titleSearch.setAlignmentX(CENTER_ALIGNMENT);
 		 
 		isbnSearch.add(isbnS);
 		isbnSearch.add(isbSearch);
+		isbnSearch.add(searchI);
 		isbnSearch.setAlignmentX(CENTER_ALIGNMENT);
 		 
 		comps.add(title);
 		comps.add(authorSearch);
 		comps.add(titleSearch);
 		comps.add(isbnSearch);
-		comps.add(search);
 		
 		container.add(comps, BorderLayout.CENTER);
+		container.add(see, BorderLayout.PAGE_END);
 		return container;
 	}
 	private JPanel showReturn()

@@ -69,7 +69,7 @@ public class Book
 	}
 	public String toString() {
 		// Returns a string representation of the book class
-		return "\"" + TITLE + "\" by " + AUTHOR + "\n" + "ISBN: " + ISBN;
+		return "\"" + TITLE + "\" by " + AUTHOR + " \n" + "ISBN: " + ISBN;
 	}	
 }
 
