@@ -75,7 +75,9 @@ public class Login extends JPanel
 		JButton buttLogin = new JButton("Login");
 		JButton buttBack = new JButton("Back");
 		
+		buttLogin.setActionCommand("books");
 		buttLogin.addActionListener(new LoginListener());
+		buttLogin.addActionListener(new SMenuListener());
 		
 		buttBack.setActionCommand("Home");
 		buttBack.addActionListener(new CardListener());

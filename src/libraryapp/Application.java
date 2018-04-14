@@ -24,7 +24,7 @@ public class Application
 	private static void createAndShowGUI()
 	{
 		MainFrame main = new MainFrame();
-		main.initComponents("user.csv", "book.csv");
+		main.initComponents();
 		main.pack();
 		main.setVisible(true);
 	}

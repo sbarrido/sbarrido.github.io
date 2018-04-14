@@ -3,9 +3,11 @@ package libraryapp.model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.Date;
 
 public class Library 
 {
@@ -18,6 +20,9 @@ public class Library
 	{
 		bookMap = new ConcurrentHashMap<String, ArrayList<Book>>();
 		userList = new ArrayList<Person>();
+		readBookList("book.csv");
+		readUserList("user.csv");
+		
 	}
 	//Modifiers
 	public void addBook(Book book)
@@ -100,7 +105,7 @@ public class Library
 	{
 		;
 	}
-	public void readUserList(String filePath)
+	private void readUserList(String filePath)
 	{
 		try 
 		{
@@ -127,6 +132,8 @@ public class Library
 						else
 						{
 							Student student = new Student(elements[0], elements[1]);
+							student.setLendingIDs(readLendingIDs(elements[2]));
+							student.setPenalties(Integer.valueOf(elements[3]));
 							userList.add(student);
 						}
 					}
@@ -142,7 +149,7 @@ public class Library
 			} fileScan.close();
 		}catch(FileNotFoundException e) {}
 	}
-	public void readBookList(String filePath)
+	private void readBookList(String filePath)
 	{
 		try 
 		{
@@ -182,6 +189,10 @@ public class Library
 	{
 		return this.bookMap;
 	}
+	public ArrayList<Person> getUsers()
+	{
+		return this.userList;
+	}
 	
 	//Methods
 	protected boolean isUser(String _username, String _password)
@@ -195,6 +206,35 @@ public class Library
 				toReturn = true;
 				break;
 			}
+		}
+		return toReturn;
+	}
+	private ArrayList<Lending_ID> readLendingIDs(String interpret)
+	{
+		ArrayList<Lending_ID> toReturn = new ArrayList<Lending_ID>();
+		
+		String[] stringLends = interpret.split("\\*");
+		for(String stringLendID : stringLends)
+		{
+			String[] lendIDInfo = stringLendID.split("[\\{\\}]");
+			for(String info : lendIDInfo)
+			{
+				String[] isbn_and_date = info.split("\\/");
+				if(isbn_and_date.length > 1)
+				{
+					
+					if(bookMap.containsKey(isbn_and_date[0]))
+					{
+						Book book = bookMap.get(isbn_and_date[0]).get(0);
+						Date rent = new Date(Long.valueOf(isbn_and_date[1]));
+						Date returns = new Date(Long.valueOf(isbn_and_date[2]));
+						
+						Lending_ID lendID = new Lending_ID(book, rent, returns);
+						toReturn.add(lendID);
+					}
+				}
+			}
+			
 		}
 		return toReturn;
 	}
@@ -230,8 +270,5 @@ public class Library
 		}catch(FileNotFoundException e) {}
 		return dupedValues;
 	}
-	public ArrayList<Person> getUsers()
-	{
-		return this.userList;
-	}
+
 }

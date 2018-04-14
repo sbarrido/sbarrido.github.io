@@ -59,7 +59,7 @@ public class Book
 		
 		return Long.parseLong(target);
 	}
-	protected static String stringISBN(Long isbn)
+	public static String stringISBN(Long isbn)
 	{
 		String value = String.valueOf(isbn);
 		String formatted = "";

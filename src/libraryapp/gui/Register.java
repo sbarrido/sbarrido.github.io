@@ -88,8 +88,12 @@ public class Register extends JPanel
 		JButton buttRegister = new JButton("Register");
 		JButton buttBack = new JButton("Back");
 		
+		buttRegister.setActionCommand("Home");
+		buttRegister.addActionListener(new RegisterListener());
+		
 		buttBack.setActionCommand("Home");
 		buttBack.addActionListener(new CardListener());
+		
 		buttContainer.add(buttRegister);
 		buttContainer.add(buttBack);
 		buttContainer.setAlignmentX(CENTER_ALIGNMENT);

@@ -1,12 +1,13 @@
 package libraryapp.gui.utilities;
-import libraryapp.gui.*;
 
 import javax.swing.JButton;
+
+import libraryapp.gui.StudentMenu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CardListener implements ActionListener
+public class SMenuListener implements ActionListener
 {
 
 	@Override
@@ -15,10 +16,7 @@ public class CardListener implements ActionListener
 		JButton button = (JButton) event.getSource();
 		String card = button.getActionCommand();
 		
-		Login.idLogin.setText("");
-		Login.passLogin.setText("");
-		
-		MainFrame.cardLO.show(MainFrame.mainContainer, card);
+		StudentMenu.studentCard.show(StudentMenu.studentCont, card);
 	}
 
 }

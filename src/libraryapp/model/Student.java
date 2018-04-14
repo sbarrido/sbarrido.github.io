@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Student extends Person
 {
 	private int Penalties;
-	ArrayList<LendingID> Lending_IDS = new ArrayList<>();
+	ArrayList<Lending_ID> Lending_IDS = new ArrayList<>();
 	
 	public Student()
 	{
@@ -18,10 +18,13 @@ public class Student extends Person
 		this.setPass(_pass);
 	}
 	//GETTERS
-	protected int getPenalities() {
+	public int getPenalities() {
 		return this.Penalties;
 	}
-	
+	public ArrayList<Lending_ID> getLendIDS()
+	{
+		return this.Lending_IDS;
+	}
 	//SETTERS
 	protected void setPenalties(int amount) {
 		this.Penalties = amount;
@@ -34,19 +37,19 @@ public class Student extends Person
 	protected void rmvPenalty() {
 		
 	}
-	protected void addLendingIDList(LendingID id) {
+	protected void addLendingIDList(Lending_ID id) {
 		Lending_IDS.add(id);
 	}
-	protected void rmvLendingIDList(LendingID id) {
+	protected void rmvLendingIDList(Lending_ID id) {
 		Lending_IDS.remove(id);
 	}
-	protected ArrayList<LendingID> getLendingIDs(){
-		return this.Lending_IDS;
+	protected void setLendingIDs(ArrayList<Lending_ID> list) {
+		Lending_IDS = list;
 	}
 	protected String formatLendIDs()
 	{
 		String formatted = "";
-		for(LendingID lendID : Lending_IDS)
+		for(Lending_ID lendID : Lending_IDS)
 		{
 			formatted += lendID.getID() + "{" + Book.stringISBN(lendID.getBook().getISBN())
 			+ "/" + lendID.getRentDate() + "/" + lendID.getReturnDate() + "}";
