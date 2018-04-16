@@ -1,4 +1,5 @@
 package libraryapp.gui;
+import libraryapp.gui.utilities.*;
 
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
@@ -19,9 +20,8 @@ import java.awt.Dimension;
 public class SearchResultsMenu extends JPanel implements ActionListener
 {
 	private static final long serialVersionUID = 1L;
-	private JList<String> foundList;
+	public static JList<String> foundList;
 	public static DefaultListModel<String> foundBooks = new DefaultListModel<String>();
-	
 	public SearchResultsMenu()
 	{
 		super();
@@ -35,20 +35,22 @@ public class SearchResultsMenu extends JPanel implements ActionListener
 		
 		JLabel title = new JLabel("Search Results");
 		foundList = new JList<String>(foundBooks);
-		JButton add = new JButton("Checkout");
+		JButton checkout = new JButton("Checkout");
 		
 		title.setAlignmentX(CENTER_ALIGNMENT);
 		foundList.setAlignmentX(CENTER_ALIGNMENT);
-		add.setAlignmentX(CENTER_ALIGNMENT);
+		checkout.setAlignmentX(CENTER_ALIGNMENT);
 		
 		foundList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		
+		checkout.addActionListener(new ListSelector());
 		
 		JScrollPane listScroll = new JScrollPane(foundList);
 		listScroll.setPreferredSize(new Dimension(250, 200));
 		listScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		
 		titleCont.add(title);
-		buttCont.add(add);
+		buttCont.add(checkout);
 		
 		container.add(titleCont, BorderLayout.PAGE_START);
 		container.add(listScroll, BorderLayout.CENTER);

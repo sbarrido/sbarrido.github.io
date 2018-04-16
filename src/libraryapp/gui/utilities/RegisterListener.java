@@ -44,7 +44,7 @@ public class RegisterListener implements ActionListener
 	}
 	private boolean isExist(String inputID)
 	{
-		boolean toReturn = true;
+		boolean toReturn = false;
 		search:
 			for(Person user : MainFrame.myLibrary.getUsers())
 			{

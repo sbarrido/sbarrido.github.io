@@ -71,6 +71,7 @@ public class StudentMenu extends JPanel implements Observer
 		
 		logout.setActionCommand("Home");
 		logout.addActionListener(new CardListener());
+		logout.addActionListener(new LogoutListener());
 		
 		userBooks.setAlignmentX(CENTER_ALIGNMENT);
 		searchBooks.setAlignmentX(CENTER_ALIGNMENT);

@@ -37,7 +37,7 @@ public class Student extends Person
 	protected void rmvPenalty() {
 		
 	}
-	protected void addLendingIDList(Lending_ID id) {
+	public void addLendingIDList(Lending_ID id) {
 		Lending_IDS.add(id);
 	}
 	protected void rmvLendingIDList(Lending_ID id) {

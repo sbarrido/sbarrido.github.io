@@ -78,7 +78,10 @@ public class Library
 				String[] elements = line.split(",");
 				if(elements.length != 0)
 				{
-					personInfo += line + "\n";
+					if(!elements[0].equals(person.getID()))
+					{
+						personInfo += line + "\n";
+					}
 				}
 				else
 				{
@@ -317,5 +320,36 @@ public class Library
 			} fileScan.close();
 		}catch(FileNotFoundException e) {}
 		return dupedValues;
+	}
+	public void updateList()
+	{
+		try
+		{
+			File file = new File(userPath);
+			PrintWriter writer = new PrintWriter(file);
+			
+			String userInfo = "";
+			for(Person user : userList)
+			{
+				if(user instanceof Student)
+				{
+					Student student = (Student) user;
+					
+					userInfo += student.getID() + "," + student.getPass() + "," 
+					+ student.formatLendIDs() + "," + student.getPenalities();
+					userInfo += "\n";
+					
+				}
+				if(user instanceof Librarian)
+				{
+					Librarian librarian = (Librarian) user;
+					userInfo += librarian.getID() + "," + librarian.getPass();
+					userInfo += "\n";
+				}
+			}
+			
+			writer.write(userInfo);
+			writer.close();
+		}catch(FileNotFoundException e) {};
 	}
 }
