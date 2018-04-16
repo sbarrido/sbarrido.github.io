@@ -52,7 +52,7 @@ public class Student extends Person
 		for(Lending_ID lendID : Lending_IDS)
 		{
 			formatted += lendID.getID() + "{" + Book.stringISBN(lendID.getBook().getISBN())
-			+ "/" + lendID.getRentDate() + "/" + lendID.getReturnDate() + "}";
+			+ "/" + lendID.getRentDate().getTime() + "/" + lendID.getReturnDate().getTime() + "}";
 			
 			formatted += "*";
 		}

@@ -23,21 +23,21 @@ public class SearchListener implements ActionListener
 		{
 		case "author":
 			String authName = StudentMenu.authSearch.getText();
-			searchLibrary(authName);
+			searchLibrary(authName, searchType);
 			break;
 		case "title":
 			String titlName = StudentMenu.titlSearch.getText();
-			searchLibrary(titlName);
+			searchLibrary(titlName, searchType);
 			break;
 		case "isbn":
 			String isbnName = StudentMenu.isbSearch.getText();
-			searchLibrary(isbnName);
+			searchLibrary(isbnName, searchType);
 			break;
 		default:
 			break;
 		}
 	}
-	private void searchLibrary(String target)
+	private void searchLibrary(String target, String mapType)
 	{
 		SwingUtilities.invokeLater(new Runnable()
 		{
@@ -45,10 +45,13 @@ public class SearchListener implements ActionListener
 			@Override
 			public void run() 
 			{
-				ArrayList<Book> targetBooks = MainFrame.myLibrary.getBookMap().get(target);
-				for(Book book : targetBooks)
+				ArrayList<Book> targetBooks = MainFrame.myLibrary.getMap(mapType).get(target);
+				if(MainFrame.myLibrary.getMap(mapType).get(target) != null)
 				{
-					SearchResultsMenu.foundBooks.addElement(book.toString());
+					for(Book book : targetBooks)
+					{
+						SearchResultsMenu.foundBooks.addElement(book.toString());
+					}
 				}
 			}
 	
