@@ -7,6 +7,7 @@ Spring '18 Goals:
 - [x] Create a working GUI Application
 - [x] Experience UNIX/LINUX Systems
 ## Applications
+- [Course Registration System](https://github.com/sbarrido/CourseApp.git)
 - [Library System](https://github.com/sbarrido/LibraryApp)
 ## Java 
 - [Basic Printing](projects/basicPrinting.md)
