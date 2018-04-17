@@ -32,6 +32,7 @@ public class CheckoutListener implements ActionListener
 										Lending_ID newLend = new Lending_ID(book);
 										book.setAvailable(false);
 										((Student) user).addLendingIDList(newLend);
+										break;
 									}
 									else
 									{

@@ -1,5 +1,6 @@
 author, title, isbn, available
-Candy,Biography,399-538-0101,true
-J. K. Rowling,Harry Potter,320-358-0032,false
-Joseph Conrad,Heart of Darkness,345-994-3294,false
-Sam,Biography,342-430-0000,true
+Candy,Biography,399-538-0101,TRUE
+J. K. Rowling,Harry Potter,320-358-0032,TRUE
+J. K. Rowling,Harry Potter,320-358-0032,TRUE
+Joseph Conrad,Heart of Darkness,345-994-3294,TRUE
+Sam,Biography,342-430-0000,TRUE

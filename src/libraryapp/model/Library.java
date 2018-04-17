@@ -30,7 +30,6 @@ public class Library
 		userList = new ArrayList<Person>();
 		readBookList("book.csv");
 		readUserList("user.csv");
-		
 	}
 	//Modifiers
 	public void addBook(Book book)
@@ -143,6 +142,42 @@ public class Library
 			writer.close();
 		}catch(FileNotFoundException e) {}
 		finally {readUserList(userPath);}
+	}	
+	//Getters
+	public ConcurrentHashMap<String, ArrayList<Book>> getMap(String type)
+	{
+		switch(type)
+		{
+		case "author":
+			return this.authorMap;
+
+		case "title":
+			return this.titleMap;
+		case "isbn":
+			return this.isbnMap;
+		default:
+			return this.bookMap;
+		}
+	}
+	public ArrayList<Person> getUsers()
+	{
+		return this.userList;
+	}
+	
+	//Methods
+	protected boolean isUser(String _username, String _password)
+	{
+		boolean toReturn = false;
+		for(Person user : userList)
+		{
+			boolean correctLogin = (user.getID().equals(_username) && user.getPass().equals(_password));
+			if(correctLogin)
+			{
+				toReturn = true;
+				break;
+			}
+		}
+		return toReturn;
 	}
 	private void readUserList(String filePath)
 	{
@@ -225,43 +260,6 @@ public class Library
 				}
 			} fileScan.close();
 		} catch(FileNotFoundException e) {}
-	}
-	
-	//Getters
-	public ConcurrentHashMap<String, ArrayList<Book>> getMap(String type)
-	{
-		switch(type)
-		{
-		case "author":
-			return this.authorMap;
-
-		case "title":
-			return this.titleMap;
-		case "isbn":
-			return this.isbnMap;
-		default:
-			return this.bookMap;
-		}
-	}
-	public ArrayList<Person> getUsers()
-	{
-		return this.userList;
-	}
-	
-	//Methods
-	protected boolean isUser(String _username, String _password)
-	{
-		boolean toReturn = false;
-		for(Person user : userList)
-		{
-			boolean correctLogin = (user.getID().equals(_username) && user.getPass().equals(_password));
-			if(correctLogin)
-			{
-				toReturn = true;
-				break;
-			}
-		}
-		return toReturn;
 	}
 	private ArrayList<Lending_ID> readLendingIDs(String interpret)
 	{
@@ -373,7 +371,7 @@ public class Library
 			PrintWriter writer = new PrintWriter(file);
 			
 			String bookInfo = "author, title, isbn, available" + "\n";
-			Iterator iter = isbnMap.entrySet().iterator();
+			Iterator<Map.Entry<String, ArrayList<Book>>> iter = isbnMap.entrySet().iterator();
 			while(iter.hasNext())
 			{
 				Map.Entry<String, ArrayList<Book>> entries = (Map.Entry<String, ArrayList<Book>>) iter.next();
@@ -391,5 +389,21 @@ public class Library
 			writer.write(bookInfo);
 			writer.close();
 		}catch(FileNotFoundException e) {};
+	}
+	public void updatePenalties()
+	{
+		for(Person user : userList)
+		{
+			if(user instanceof Student)
+			{
+				for(Lending_ID lendID : ((Student) user).getLendIDS())
+				{
+					if(lendID.isOverdue())
+					{
+						((Student) user).addPenalty();
+					}
+				}
+			}
+		}
 	}
 }

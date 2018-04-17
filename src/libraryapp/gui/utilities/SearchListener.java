@@ -49,7 +49,10 @@ public class SearchListener implements ActionListener
 				{
 					for(Book book : targetBooks)
 					{
-						SearchResultsMenu.foundBooks.addElement(book.toString());
+						if(book.getAvailable())
+						{
+							SearchResultsMenu.foundBooks.addElement(book.toString());
+						}
 					}
 				}
 			}

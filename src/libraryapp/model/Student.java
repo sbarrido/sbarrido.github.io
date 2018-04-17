@@ -32,7 +32,7 @@ public class Student extends Person
 	
 	//METHODS
 	protected void addPenalty() {
-		
+		this.Penalties -= 5;
 	}
 	protected void rmvPenalty() {
 		
