@@ -26,7 +26,7 @@ public class Student extends Person
 		return this.Lending_IDS;
 	}
 	//SETTERS
-	protected void setPenalties(int amount) {
+	public void setPenalties(int amount) {
 		this.Penalties = amount;
 	}
 	
@@ -38,9 +38,17 @@ public class Student extends Person
 		
 	}
 	public void addLendingIDList(Lending_ID id) {
-		Lending_IDS.add(id);
+		if(Penalties >= 0)
+		{
+			Lending_IDS.add(id);
+			System.out.println("i added a book to user");
+		}
+		else
+		{
+			System.out.println("too many penalties");
+		}
 	}
-	protected void rmvLendingIDList(Lending_ID id) {
+	public void rmvLendingIDList(Lending_ID id) {
 		Lending_IDS.remove(id);
 	}
 	protected void setLendingIDs(ArrayList<Lending_ID> list) {

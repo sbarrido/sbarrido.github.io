@@ -5,8 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 import java.util.Date;
 
 public class Library 
@@ -53,7 +55,7 @@ public class Library
 				}
 			}fileScan.close();
 			
-			bookValues += book.getAuthor() + "," + book.getTitle() + "," + Book.stringISBN(book.getISBN()) +"\n";
+			bookValues += book.getAuthor() + "," + book.getTitle() + "," + Book.stringISBN(book.getISBN()) + "," + book.getAvailable()+ "\n";
 			PrintWriter writer = new PrintWriter(file);
 			writer.write(bookValues);
 			writer.close();
@@ -160,6 +162,7 @@ public class Library
 				{
 					if(elements.length != 0)
 					{
+						System.out.println(line);
 						boolean isLibrarian = elements[0].contains("*");
 						if(isLibrarian)
 						{
@@ -309,6 +312,16 @@ public class Library
 						if(value.equals(elem))
 						{
 							Book newBook = new Book(elements[0], elements[1], Book.longISBN(elements[2]));
+							System.out.println(elements[3]);
+							if(elements[3].equals("TRUE") || elements[3].equals("true"))
+							{
+								newBook.setAvailable(true);
+								System.out.println("I set avaiilable");
+							}
+							else
+							{
+								newBook.setAvailable(false);
+							}
 							dupedValues.add(newBook);
 						}
 					}
@@ -321,14 +334,14 @@ public class Library
 		}catch(FileNotFoundException e) {}
 		return dupedValues;
 	}
-	public void updateList()
+	public void updateUserList()
 	{
 		try
 		{
 			File file = new File(userPath);
 			PrintWriter writer = new PrintWriter(file);
 			
-			String userInfo = "";
+			String userInfo = "ID, Password, LendingIDs, Penalties" + "\n";
 			for(Person user : userList)
 			{
 				if(user instanceof Student)
@@ -349,6 +362,33 @@ public class Library
 			}
 			
 			writer.write(userInfo);
+			writer.close();
+		}catch(FileNotFoundException e) {};
+	}
+	public void updateBookList()
+	{
+		try
+		{
+			File file = new File(bookPath);
+			PrintWriter writer = new PrintWriter(file);
+			
+			String bookInfo = "author, title, isbn, available" + "\n";
+			Iterator iter = isbnMap.entrySet().iterator();
+			while(iter.hasNext())
+			{
+				Map.Entry<String, ArrayList<Book>> entries = (Map.Entry<String, ArrayList<Book>>) iter.next();
+				ArrayList<Book> books = entries.getValue();
+				for(Book book : books)
+				{
+					bookInfo += book.getAuthor() + ","
+							 + book.getTitle() + ","
+							 + Book.stringISBN(book.getISBN()) + ","
+							 + book.getAvailable() + "\n";
+					System.out.println(book.getAvailable());
+				}
+			}
+			
+			writer.write(bookInfo);
 			writer.close();
 		}catch(FileNotFoundException e) {};
 	}

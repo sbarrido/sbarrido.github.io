@@ -17,6 +17,16 @@ public class CardListener implements ActionListener
 		
 		Login.idLogin.setText("");
 		Login.passLogin.setText("");
+		Register.idRegister.setText("");
+		Register.passRegister.setText("");
+		Register.passConfirm.setText("");
+		StudentMenu.authSearch.setText("");
+		StudentMenu.isbSearch.setText("");
+		StudentMenu.titlSearch.setText("");
+		StudentMenu.payment.setText("");
+		StudentMenu.myBooks.clear();
+		SearchResultsMenu.foundBooks.clear();
+		
 		
 		MainFrame.cardLO.show(MainFrame.mainContainer, card);
 	}

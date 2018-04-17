@@ -9,7 +9,8 @@ public class LogoutListener implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent event) 
 	{
-		MainFrame.myLibrary.updateList();
+		MainFrame.myLibrary.updateUserList();
+		MainFrame.myLibrary.updateBookList();
 	}
 
 }

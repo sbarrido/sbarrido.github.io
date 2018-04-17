@@ -43,7 +43,7 @@ public class SearchResultsMenu extends JPanel implements ActionListener
 		
 		foundList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		
-		checkout.addActionListener(new ListSelector());
+		checkout.addActionListener(new CheckoutListener());
 		
 		JScrollPane listScroll = new JScrollPane(foundList);
 		listScroll.setPreferredSize(new Dimension(250, 200));

@@ -17,7 +17,6 @@ public class SearchListener implements ActionListener
 	{
 		JButton button = (JButton) event.getSource();
 		String searchType = button.getActionCommand();
-		StudentMenu.bookResults.clear();
 		
 		switch(searchType)
 		{

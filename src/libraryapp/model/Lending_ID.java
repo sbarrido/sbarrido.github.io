@@ -67,7 +67,7 @@ public class Lending_ID {
 	protected void setReturnDate(Date d){ this.returnDate = d; }	/** Sets the date it's due to return by */
 	//protected void setTodaysDate()	{ this.todaysDate = new Date(); }
 	// GETTERS
-	protected int getID() 			{ return lendingID; }/** Returns the lending ID */
+	public int getID() 			{ return lendingID; }/** Returns the lending ID */
 	public Book getBook() 		{ return this.myBook; }			/** Returns the book */
 	protected Date getRentDate()	{ return this.rentDate; }		/** Returns the date it was rented */
 	protected Date getReturnDate() 	{ return this.returnDate; }		/** Returns the date it's due to return by */
@@ -107,7 +107,7 @@ public class Lending_ID {
 	
 	/** Returns a string representation of lending ID */
 	public String toString() {
-		return "Lend ID: " + getID() + "\n" + myBook.toString() +"\n" +  "due: " + getReturnDate();
+		return "Lend ID: " + getID() + " \n" + myBook.toString() +"\n " +  "due: " + getReturnDate();
 	}
 }
 

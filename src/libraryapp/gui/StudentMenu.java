@@ -10,12 +10,13 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.JRadioButton;
+import javax.swing.ListSelectionModel;
+import javax.swing.JList;
+import javax.swing.DefaultListModel;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 
-import java.util.ArrayList;
 
 public class StudentMenu extends JPanel implements Observer
 {
@@ -23,13 +24,14 @@ public class StudentMenu extends JPanel implements Observer
 	public static CardLayout studentCard = new CardLayout();
 	public static JPanel studentCont = new JPanel(studentCard);
 	private static JLabel username = new JLabel();
-	private static JLabel owed = new JLabel();
-	private static JTextArea bookList = new JTextArea(20, 40);
+	public static JLabel owed = new JLabel();
+	public static DefaultListModel<String> myBooks = new DefaultListModel<String>();
+	public static JList<String> returnList = new JList<String>(myBooks);
+	public static JTextArea bookList = new JTextArea(20, 40);
 	public static JTextField payment = new JTextField(5);
 	public static JTextField authSearch = new JTextField(20);
 	public static JTextField titlSearch = new JTextField(20);
 	public static JTextField isbSearch = new JTextField(20);
-	public static ArrayList<JRadioButton> bookResults = new ArrayList<JRadioButton>();
 	
 	private Student user = new Student();
 	
@@ -93,7 +95,7 @@ public class StudentMenu extends JPanel implements Observer
 	}
 	private JPanel cardPanel()
 	{
-		JPanel books = new JPanel();	
+		JPanel books = new JPanel();
 		books.add(showBooks());
 		
 		JPanel search = showSearch();
@@ -198,12 +200,17 @@ public class StudentMenu extends JPanel implements Observer
 		JButton confirm = new JButton("Confirm");
 		JButton back = new JButton("Back");
 		
+		confirm.addActionListener(new ReturnListener());
+		
 		comps.add(title);
+		
+		StudentMenu.returnList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		
 		buttons.add(confirm);
 		buttons.add(back);
 		
 		container.add(comps, BorderLayout.PAGE_START);
+		container.add(StudentMenu.returnList, BorderLayout.CENTER);
 		container.add(buttons, BorderLayout.PAGE_END);
 		container.setVisible(true);
 		return container;
@@ -222,6 +229,8 @@ public class StudentMenu extends JPanel implements Observer
 		
 		JButton confirm = new JButton("Confirm Payment");
 		JButton back = new JButton("Back");
+		
+		confirm.addActionListener(new PaymentListener());
 		
 		title.setAlignmentX(CENTER_ALIGNMENT);
 		owed.setAlignmentX(CENTER_ALIGNMENT);
@@ -263,6 +272,11 @@ public class StudentMenu extends JPanel implements Observer
 		StudentMenu.username.setText("Student: " + user.getID());
 		bookList.setText(updateText());
 		owed.setText("Total Dues Owed: " + user.getPenalities());
+		for(Lending_ID lendID : user.getLendIDS())
+		{
+			StudentMenu.myBooks.addElement(lendID.toString());
+		}
+		StudentMenu.returnList.setModel(myBooks);
 	}
 
 }
