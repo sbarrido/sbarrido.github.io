@@ -4,8 +4,10 @@ by excercises or assignments received during my undergraduate experience. As I l
 skills become more robust, I hope to continually update this page. 
 
 Spring '18 Goals:
-- [] Create a working GUI Application
-- [] Experience UNIX/LINUX Systems
+- [x] Create a working GUI Application
+- [x] Experience UNIX/LINUX Systems
+## Applications
+- [Library System](https://github.com/sbarrido/LibraryApp)
 ## Java 
 - [Basic Printing](projects/basicPrinting.md)
 - [Exploring Charset](projects/charsetPrinting.md)
