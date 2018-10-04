@@ -8,5 +8,5 @@ Interested to see some of my work? [Projects](projects.md)
 
 **Proficient**
 -  [x] Racket
--  [x] Java/JS
+-  [x] Java
 
