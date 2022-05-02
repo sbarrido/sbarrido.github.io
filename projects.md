@@ -7,6 +7,8 @@ Spring '18 Goals:
 - [x] Create a working GUI Application
 - [x] Experience UNIX/LINUX Systems
 ## Applications
+- [Reimbursement Application](https://github.com/sbarrido/reimbursement)
+- [Sud'n Impact Gym](https://github.com/sbarrido/sudden_gym)
 - [Course Registration System](https://github.com/sbarrido/CourseApp.git)
 - [Library System](https://github.com/sbarrido/LibraryApp)
 ## Java 
