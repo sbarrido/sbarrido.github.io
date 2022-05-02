@@ -6,6 +6,20 @@ skills become more robust, I hope to continually update this page.
 Spring '18 Goals:
 - [x] Create a working GUI Application
 - [x] Experience UNIX/LINUX Systems
+Spring '19 Goals:
+- [x] Work with Databases
+Spring '20 Goals:
+- [x] Work Frontend Development
+- [x] React
+- [x] Bootstrap
+Spring '21 Goals:
+- [x] Experience Development Frameworks
+- [x] Maven Exposure
+- [x] Spring Boot exposure 
+Spring '22 Goals:
+- [wip] Full Stack Application
+
+
 ## Applications
 - [Reimbursement Application](https://github.com/sbarrido/reimbursement)
 - [Sud'n Impact Gym](https://github.com/sbarrido/sudden_gym)
