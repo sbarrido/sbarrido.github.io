@@ -17,7 +17,7 @@ Spring '21 Goals:
 - [x] Maven Exposure
 - [x] Spring Boot exposure 
 Spring '22 Goals:
-- [wip] Full Stack Application
+- [ ] Full Stack Application
 
 
 ## Applications
