@@ -1,5 +1,7 @@
 # Sam Barrido - Student
 ## About
+
+
    Computer Science Major specializing in backend development. I am passionate about healthcare and maintaining patient information so electronic health records greatly interest me. 
    
 **Education**
