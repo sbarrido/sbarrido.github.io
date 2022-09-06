@@ -1,8 +1,7 @@
 # Sam Barrido - Student
 ## About
 
-
-   Computer Science Major specializing in backend development. I am passionate about healthcare and maintaining patient information so electronic health records greatly interest me. 
+   Computer Science Major specializing in Software Engineering
    
 **Education**
 - AS Computer Science &#124; Ivy Tech Community College 2022
