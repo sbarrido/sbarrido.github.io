@@ -6,7 +6,7 @@
    
 **Education**
 - AS Computer Science &#124; Ivy Tech Community College 2022
-- - BS Computer Science &#124; Indiana University 2024
+- BS Computer Science &#124; Indiana University 2024
     - School of Informatics, Computing, and Engineering
     - 
 ## Projects
