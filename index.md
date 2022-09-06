@@ -1,6 +1,7 @@
 # Sam Barrido - Student
 **Education**
 - AS Computer Science &#124; Ivy Tech Community College 2022
+    - Honors: Cum Laude
 - BS Computer Science &#124; Indiana University 2024
     - School of Informatics, Computing, and Engineering
     - Specializing in Software Engineering
