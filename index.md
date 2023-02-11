@@ -1,9 +1,9 @@
 # Sam Barrido - Student
 **Education**
-- AS Computer Science &#124; Ivy Tech Community College 2022
+- AS Computer Science &#124; Ivy Tech Community College
     - Honors: Cum Laude
-- BS Computer Science &#124; Indiana University 2024
-    - School of Informatics, Computing, and Engineering
+- BS Computer Science &#124; Indiana University
+    - Luddy School of Informatics, Computing, and Engineering
     - Specializing in Software Engineering
 ## Projects
 Interested to see some of my work? [Projects](projects.md)
@@ -15,12 +15,12 @@ Interested to see some of my work? [Projects](projects.md)
 **Proficient**
 -  [x] Racket
 -  [x] Java
--  [x] HTML/CSS
 -  [x] C++
+-  [x] HTML/CSS
 -  [x] JavaScript
 -  [x] React
 -  [x] Spring Boot
 -  [x] Bootstrap
 -  [x] SQL
--  [x] *nix Systems
+-  [x] Unix Systems
 
