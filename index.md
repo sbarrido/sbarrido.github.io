@@ -3,6 +3,7 @@
 - BS Computer Science &#124; Indiana University
     - Luddy School of Informatics, Computing, and Engineering
     - Specializing in Software Engineering
+    - GPA: 3.53
 - AS Computer Science &#124; Ivy Tech Community College
     - Honors: Cum Laude
 ## Projects
