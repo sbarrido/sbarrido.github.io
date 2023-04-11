@@ -1,10 +1,10 @@
 # Sam Barrido - Student
 **Education**
-- AS Computer Science &#124; Ivy Tech Community College
-    - Honors: Cum Laude
 - BS Computer Science &#124; Indiana University
     - Luddy School of Informatics, Computing, and Engineering
     - Specializing in Software Engineering
+- AS Computer Science &#124; Ivy Tech Community College
+    - Honors: Cum Laude
 ## Projects
 Interested to see some of my work? [Projects](projects.md)
 
