@@ -1,4 +1,4 @@
-# Sam Barrido - Student
+# Sam Barrido - Software Engineer
 **Education**
 - BS Computer Science &#124; Indiana University
     - Luddy School of Informatics, Computing, and Engineering
